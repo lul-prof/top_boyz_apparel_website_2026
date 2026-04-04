@@ -1,0 +1,43 @@
+.frame-container{
+    padding: 10px;
+    width: 100%;
+}
+
+.frame-container iframe{
+    border-radius: 10px;
+}
+.frame-container .flex-frame{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.frame-container .flex-frame iframe{
+    padding: 5px;
+}
+.mf-header{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.mf-header hr{
+    opacity: 0.3;
+    margin: 10px 20px;
+}
+
+.mf-header h1{
+    font-weight: 800;
+}
+@media (max-width:768px) and (min-width:100px) {
+.frame-container .flex-frame{
+    grid-template-columns: 1fr;
+}
+.mf-header h1{
+    font-size: 25px;
+}
+
+.mf-header h2{
+    font-size: 12px;
+}
+
+}

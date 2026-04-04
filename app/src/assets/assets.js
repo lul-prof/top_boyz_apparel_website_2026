@@ -107,7 +107,6 @@ import product_109 from './birken-2.jpeg'
 import product_110 from './birken-2a.jpeg'
 import product_111 from './al-nasar.jpeg'
 import product_112 from './city.jpeg'
-import product_113 from './liverpool.jpeg'
 import product_114 from './arsenal.jpeg'
 import product_115 from './psg.jpeg'
 import product_116 from './orange-bandana.jpeg'
@@ -228,6 +227,47 @@ import product_239 from './kids_6.jpeg'
 import product_240 from './kids_7.jpeg'
 import product_241 from './kids_8.jpeg'
 import product_242 from './kids_10.jpeg'
+import userIcon from './user.png'
+import cartIcon from './shopping-bag.png'
+import menuIcon from './menu-white.png'
+import heroImage from './hero_1.jpeg'
+import searchIcon from './magnifying-glass.png'
+import dashIcon from './remove.png'
+import flex1 from './flex_1.jpeg'
+import flex2 from './flex_2.jpeg'
+import flex3 from './flex_3.jpeg'
+import flex4 from './flex_4.jpeg'
+import heroImage2 from './hero_2.jpeg'
+import heroReal from './hero_real.png'
+import heroReal2 from './cap_2.jpeg'
+import customerSupport from './Customer-support1.png'
+import exchangePolicy from './exchange-policy.png'
+import returnPolicy from './return-policy.png'
+import avatar from './avatar.png'
+import star from './star.jpeg'
+import closeIcon from './close.png'
+
+export const assets={
+  userIcon,
+  cartIcon,
+  menuIcon,
+  heroImage,
+  searchIcon,
+  dashIcon,
+  flex1,
+  flex2,
+  flex3,
+  flex4,
+  heroImage2,
+  heroReal,
+  heroReal2,
+  customerSupport,
+  exchangePolicy,
+  returnPolicy,
+  avatar,
+  star,
+  closeIcon
+}
 
 
 
@@ -748,7 +788,7 @@ export const products=[
     category:"men",
     subCategory:"Bottomwear",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p048",
@@ -940,7 +980,7 @@ export const products=[
     category:"men",
     subCategory:"Outerwear",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p064",
@@ -1102,13 +1142,13 @@ export const products=[
     _id: "p078",
     title: "Merrell Outdoor Shoes",
     description: "Rugged outdoor shoes built for durability, traction, and all-terrain performance.",
-    image:[product_78,product_79],
+    image:[product_79,product_78],
     price:11000.00,
     quantity:44,
     category:"unisex",
     subCategory:"Footwear",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p079",
@@ -1204,7 +1244,7 @@ export const products=[
     category:"unisex",
     subCategory:"Headwear",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p091",
@@ -1414,7 +1454,7 @@ export const products=[
     _id: "p113",
     title: "Liverpool FC Jersey",
     description: "Premium football jersey designed for comfort and showcasing iconic team colors.",
-    image:[product_113],
+    image:[product_112],
     price:3500.00,
     quantity:112,
     category:"unisex",
@@ -1936,7 +1976,7 @@ export const products=[
     category:"unisex",
     subCategory:"Accessories",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p162",
@@ -1948,7 +1988,7 @@ export const products=[
     category:"unisex",
     subCategory:"Bottomwear",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p163",
@@ -2020,7 +2060,7 @@ export const products=[
     category:"women",
     subCategory:"Topwear",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p171",
@@ -2104,7 +2144,7 @@ export const products=[
     category:"unisex",
     subCategory:"Accessories",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p181",
@@ -2272,7 +2312,7 @@ export const products=[
     category:"unisex",
     subCategory:"Footwear",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p207",
@@ -2356,7 +2396,7 @@ export const products=[
     category:"unisex",
     subCategory:"Footwear",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p221",
@@ -2428,7 +2468,7 @@ export const products=[
     category:"unisex",
     subCategory:"Footwear",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p229",
@@ -2512,7 +2552,7 @@ export const products=[
     category:"kids",
     subCategory:"Bottomwear",
     date: 1716234545448,
-    bestseller:false
+    bestseller:true
   },
   {
     _id: "p239",
@@ -2561,5 +2601,31 @@ export const products=[
     subCategory:"Footwear",
     date: 1716234545448,
     bestseller:false
+  },
+]
+
+
+export const reviews=[
+  {
+    _id:"r001",
+    name:"John Makau",
+    review:"The store is bright, well organized, and easy to navigate.",
+    avatar:[avatar]
+  },
+  {
+    _id:"r002",
+    name:"Lul prof",
+    review:"The team is attentive, the product quality is consistent, and the loyalty program is actually worth it.",
+    avatar:[avatar]
+  }, {
+    _id:"r003",
+    name:"Mary Shiro",
+    review:"Great after-sales service. Rare service like this deserves to be mentioned.",
+    avatar:[avatar]
+  }, {
+    _id:"r004",
+    name:"The Don",
+    review:"Very professional and responsive team.",
+    avatar:[avatar]
   },
 ]

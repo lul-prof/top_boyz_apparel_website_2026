@@ -1,0 +1,80 @@
+.bestseller-container{
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.bestseller-container .bestseller-clothes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.bestseller-container .bestseller-clothes .bestseller-cloth{
+    padding: 5px;
+}
+
+.bestseller-container .bestseller-clothes .bestseller-cloth img{
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+}
+
+.bestseller-container .bestseller-clothes .bestseller-cloth img:hover{
+    cursor: pointer;
+    transform: translateY(5px);
+    transition: 0.3s ease-in;
+}
+
+.bs-header{
+    text-align: center;
+    margin: 20px 0;
+}
+.bs-header h1{
+    font-weight: 700;
+}
+
+.bs-header hr{
+    opacity: 0.3;
+    margin: 10px 20px;
+}
+
+@media (max-width:500px) and (min-width:100px) {
+.bestseller-container{
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.bestseller-container .bestseller-clothes{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.bestseller-container .bestseller-clothes .bestseller-cloth{
+    padding: 5px;
+}
+
+.bestseller-container .bestseller-clothes .bestseller-cloth img{
+    width: 100%;
+    border-radius: 10px;
+    height: 70vh;
+}
+
+.bestseller-container .bestseller-clothes .bestseller-cloth img:hover{
+    cursor: pointer;
+    transform: translateY(5px);
+    transition: 0.3s ease-in;
+}
+.bs-header h1{
+    font-size: 25px;
+}
+
+.bs-header h2{
+    font-size: 15px;
+}
+
+.bs-header h3{
+    font-size: 15px;
+}
+   
+}

@@ -1,0 +1,10 @@
+.above-footer-container{
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    background-color:#18282A ;
+}
+
+.above-footer-container img{
+    width: 100%;
+}
