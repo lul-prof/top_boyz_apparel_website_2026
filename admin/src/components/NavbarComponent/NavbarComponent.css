@@ -1,0 +1,82 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    padding: 10px;
+}
+
+.navbar .navbar-center{
+    align-self: center;
+}
+.navbar .navbar-left img{
+    width: 50px;
+    height: 50px;
+}
+
+.navbar .navbar-left img:hover{
+    cursor: pointer;
+}
+
+.navbar .navbar-right img{
+    width: 50px;
+    height: 50px;
+}
+.navbar .navbar-right img:hover{
+    cursor: pointer;
+}
+
+.sidemenu{
+    height: 100vh;
+    width: 250px;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    display: none;
+    
+}
+.sidemenu .sidemenu-header{
+    text-align: center;
+}
+.sidemenu .sidemenu-header h1{
+    color: #FFEA00;
+}
+.sidemenu .sidemenu-content{
+    margin-top: 100px;
+}
+.sidemenu .sidemenu-content nav ul{
+    list-style: none;
+}
+.sidemenu .sidemenu-content nav ul li{
+    color: #FFFFFF;
+    margin: 20px 0;
+}
+.sidemenu .sidemenu-content nav ul li:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    transition: 0.5s ease-in;
+}
+
+.sidemenu .sidemenu-footer{
+    color: #FFFFFF;
+    position: fixed;
+    bottom: 2%;
+    left: 100px;
+}
+
+.sidemenu .sidemenu-footer img{
+    width: 50px;
+}
+
+.sidemenu .sidemenu-footer img:hover{
+    cursor: pointer;
+    width: 45px;
+    transition: 0.4s ease-in;
+}

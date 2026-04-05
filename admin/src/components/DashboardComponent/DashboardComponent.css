@@ -1,0 +1,187 @@
+.dashboard{
+    width: 100%;
+    margin-top: 60px;
+    padding: 20px;
+}
+.dashboard .dashboard-top{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 5px;
+}
+.dashboard h1{
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.dashboard .dashboard-top img{
+    width: 50px;
+    height: 50px;
+    animation: rotate 5s infinite;
+}
+
+.dashboard .dashboard-top .dashboard-top-left{
+    background:linear-gradient(to right, #FFFFFF ,#FAF9F6);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0.5px 1px 3px #FFFFFF;
+    backdrop-filter: blur(14px);
+}
+.dashboard .dashboard-top .dashboard-top-left:hover{
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+.dashboard .dashboard-top .dashboard-top-center{
+    background:linear-gradient(to right, #FFFFFF ,#FAF9F6);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0.5px 1px 3px #FFFFFF;
+    backdrop-filter: blur(14px);
+}
+.dashboard .dashboard-top .dashboard-top-center:hover{
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+.dashboard .dashboard-top .dashboard-top-right{
+    background:linear-gradient(to right, #FFFFFF ,#FAF9F6);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0.5px 1px 3px #FFFFFF;
+    backdrop-filter: blur(14px);
+}
+.dashboard .dashboard-top .dashboard-top-right:hover{
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+.dashboard .dashboard-top p:nth-child(1){
+    font-weight: bold;
+    font-size: larger;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+.dashboard .dashboard-center{
+    width: 100%;
+    background-color: #FAF9F6;
+    margin-top: 20px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.dashboard .dashboard-center .dashboard-center-header h1{
+    color: #000000;
+}
+.dashboard .dashboard-center .dashboard-center-center{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFEA00;
+    padding: 10px;
+    
+}
+.dashboard .dashboard-center .dashboard-center-center p{
+    font-weight:600;
+}
+.dashboard .dashboard-center .dashboard-center-center .dashboard-center-center-id{
+    width: 20%;
+}
+.dashboard .dashboard-center .dashboard-center-center .dashboard-center-center-image{
+    width: 20%;
+}
+.dashboard .dashboard-center .dashboard-center-center .dashboard-center-center-quantity{
+    width: 20%;
+}
+.dashboard .dashboard-center .dashboard-center-center .dashboard-center-center-date{
+    width: 20%;
+}
+.dashboard .dashboard-center .dashboard-center-center .dashboard-center-center-actions{
+    width: 20%;
+}
+.dashboard .dashboard-center .dashboard-center-item{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+.dashboard .dashboard-center .dashboard-center-item .product{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard .dashboard-center .dashboard-center-item .product .product-id{
+    width: 20%;
+}
+.dashboard .dashboard-center .dashboard-center-item .product .product-image{
+    width: 20%;
+}
+.dashboard .dashboard-center .dashboard-center-item .product .product-image img{
+    width: 50px;
+    height: 50px;
+}
+.dashboard .dashboard-center .dashboard-center-item .product .product-image img:hover{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s ease;
+}
+.dashboard .dashboard-center .dashboard-center-item .product .product-quantity{
+    width: 20%;
+}
+.dashboard .dashboard-center .dashboard-center-item .product .product-date{
+    width: 20%;
+}
+.dashboard .dashboard-center .dashboard-center-item .product .product-actions{
+    width: 20%;
+    display: flex;
+    gap: 2rem;
+}
+.dashboard .dashboard-center .dashboard-center-item .product .product-actions img{
+    width: 40px;
+    height: 40px;
+}
+.dashboard .dashboard-center .dashboard-center-item .product .product-actions img:hover{
+    cursor: pointer;
+    transform: translateX(4px);
+    width: 30px;
+    height: 30px;
+    transition: 0.5s ease-in;
+}
+.dashboard .dashboard-bottom{
+    margin-top: 20px;
+}
+.dashboard .dashboard-bottom .dashboard-bottom-buttons{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    overflow-x: auto;
+}
+.dashboard .dashboard-bottom .dashboard-bottom-buttons button{
+    padding: 10px;
+    width: 300px;
+    background-color: #000000;
+    outline: 0;
+    border: 0;
+    color: #FFFFFF;
+}
+.dashboard .dashboard-bottom .dashboard-bottom-buttons button:hover{
+    cursor: pointer;
+    transform: translateY(-4px);
+}

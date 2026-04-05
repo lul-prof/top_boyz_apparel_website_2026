@@ -1,24 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
 *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family:"Inter", sans-serif ;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  color: #FFFFFF;
-
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
 body{
-  background-color:#28282B;
-}
-
-h2{
-  font-weight: 500;
+    background-color:#28282B;
 }
 
 *::-webkit-scrollbar {
@@ -32,7 +24,6 @@ h2{
   background-color: #FFFFFF; 
   border-radius: 10px;
 }
-
 
 /*
 black

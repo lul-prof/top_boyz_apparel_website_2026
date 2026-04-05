@@ -1,0 +1,41 @@
+.login{
+    width: 100%;
+    margin-top: 60px;
+    padding: 20px;
+}
+.login .login-header{
+    justify-self: center;
+    margin-bottom: 30px;
+}
+.login .login-header h1{
+    color: #FFFFFF;
+}
+.login form{
+    justify-self: center;
+    width: 50%;
+}
+.login form .login-form-class,.login-form-btn{
+    margin: 10px;
+}
+
+.login form .login-form-class input{
+    width: 100%;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+}
+.login form .login-form-btn button{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 0;
+    background-color: #FFEA00;
+    font-weight: 600;
+}
+.login form .login-form-btn button:hover{
+    cursor: pointer;
+    border-top-left-radius:10px ;
+    border-bottom-right-radius: 10px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0.5px 1px 2px #000;
+}
