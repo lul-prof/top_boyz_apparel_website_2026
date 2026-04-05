@@ -1,0 +1,90 @@
+.single-merchandise-container{
+    width: 100%;
+    padding: 10px 2px;
+
+}
+
+.single-merchandise-container .sm-top{
+    display: flex;
+    gap: 50px;
+    background-color: #000000;
+    padding: 20px;
+}
+
+.single-merchandise-container .sm-top .sm-top-left{
+    backdrop-filter: blur(10px);
+    width: 40%;
+}
+
+.single-merchandise-container .sm-top .sm-top-left img{
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+}
+.single-merchandise-container .sm-top .sm-top-left img:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 1px 1px #FFEA00;
+}
+.single-merchandise-container .sm-bottom img{
+    width: 350px;
+    height: 300px;
+
+}
+.single-merchandise-container .sm-top .sm-top-right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.single-merchandise-container .sm-top .sm-top-right .sm-top-size input{
+    width: 60%;
+    color: #000000;
+    outline: 0;
+    border: 0;
+    padding: 10px 30px;
+}
+.single-merchandise-container .sm-top .sm-top-right .sm-top-size h2{
+    margin-bottom: 10px;
+}
+.single-merchandise-container .sm-top .sm-top-right .sm-top-cart button{
+    width: 60%;
+    outline: 0;
+    border: 0;
+    background-color: #FFEA00;
+    padding: 10px;
+    color: #000000;
+    font-weight: 600;
+}
+.single-merchandise-container .sm-top .sm-top-right hr{
+    opacity: 0.3;
+    width: 60%;
+}
+.single-merchandise-container .sm-top .sm-top-right .sm-top-cart button:hover{
+    cursor: pointer;
+}
+.single-merchandise-container .sm-bottom .sm-header{
+    padding: 10px;
+}
+.single-merchandise-container .sm-bottom .sm-header h1{
+    font-weight: 700;
+    color: #FFEA00;
+}
+
+.single-merchandise-container .sm-bottom .related-products{
+    display: flex;
+    overflow-x: auto;
+}
+
+.single-merchandise-container .sm-bottom .related-products .related-product{
+    margin: 5px;
+}
+
+.single-merchandise-container .sm-bottom .related-products .related-product .related-product-image img{
+    border-radius: 10px;
+}
+.single-merchandise-container .sm-bottom .related-products .related-product .related-product-image img:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 2px #FFFFFF;
+    backdrop-filter: blur(14px);
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 .navbar-container{
     display: flex;
     justify-content: space-between;
@@ -13,8 +13,12 @@
     margin-bottom: 60px;
 }
 .navbar-container .navbar-left h1{
-    font-family: "Faster One", system-ui;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
     word-spacing: 10px;
+    font-style: normal;
+    font-weight: 700;
+    color: #FFEA00;
 }
 .navbar-container .navbar-left h1:hover{
     cursor: pointer;
@@ -27,11 +31,16 @@
     list-style: none;
     display: flex;
     gap: 20px;
+    
+}
+.navbar-container .navbar-center nav ul li{
+    color: #FFEA00;
 }
 .navbar-container .navbar-center nav ul li:hover{
     cursor: pointer;
     transform: translateY(-4px);
     transition: 0.5s ease-in;
+    
 }
 
 .navbar-container .navbar-right{
@@ -66,7 +75,7 @@
     margin-top: 70px;
     width: 100%;
     height: 2px;
-    background-color:#32CD32;
+    background-color:#FFEA00;
 }
 
 #side-menu{
@@ -75,7 +84,7 @@
     right: 0;
     z-index: 1000;
     height: 100vh;
-    background-color: #C9C9C9;
+    background-color: #525252;
     width: 200px;
     padding: 0 20px;
     display: none;
@@ -89,7 +98,8 @@
 }
 
 #side-menu ul li{
-    color: #000000;
+    color: #FFEA00;
+    font-weight: 600;
     margin: 10px 0;
 }
 
@@ -127,83 +137,47 @@
     cursor: pointer;
 }
 
-@media (max-width:440px) and (min-width:100px) {
+@media (max-width:425px) and (min-width:100px) {
 .navbar-container{
-    flex-wrap: nowrap;
-    overflow: hidden;
-    height: 70px;
+    display: flex;
+    height: auto;
+    padding: 2px;
 }
 .navbar-container .navbar-left{
-    align-items: center;
-
+    align-self: center;
 }
 .navbar-container .navbar-left h1{
-    word-spacing: 10px;
+    font-weight: 600;
     font-size: 20px;
-    
+    color: #FFEA00;
 }
-.navbar-container .navbar-left h1:hover{
-    cursor: pointer;
-}
+
 .navbar-container .navbar-center{
     display: none;
 }
 
-.navbar-container .navbar-right img{
-    width: 40px;
-    height: 40px;
-}
-.navbar-container .navbar-right img:hover{
-    cursor: pointer;
-}
-.navbar-container .navbar-right .nav-menu{
-    display:block;
+.navbar-container .navbar-right{
+    display: flex;
+    margin-top: 10px;
+    gap: 5px;
 }
 .navbar-container .navbar-right .nav-cart .nav-cart-count{
-    left: 25px;
+    left: 15px;
+    bottom:15px;
 }
-#nav-divider{
-    margin-top: 70px;
-    width: 100%;
-    height: 2px;
-    background-color:#32CD32;
-}    
-  
+.navbar-container .navbar-right .nav-cart .nav-cart-count p{
+    color: #000000;
+    text-align: center;
 }
-
-
-
-@media (max-width:775px) and (min-width:441px) {
-.navbar-container{
-    flex-wrap: nowrap;
-    overflow: hidden;
-    height: 80px;
-}
-.navbar-container .navbar-left h1{
-    word-spacing: 10px;
-    font-size: 30px;
-}
-.navbar-container .navbar-left h1:hover{
-    cursor: pointer;
-}
-.navbar-container .navbar-center{
-    display: none;
-}
-
 .navbar-container .navbar-right img{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
-.navbar-container .navbar-right img:hover{
-    cursor: pointer;
-}
+
 .navbar-container .navbar-right .nav-menu{
     display:block;
 }
 #nav-divider{
-    margin-top: 70px;
-    width: 100%;
-    height: 2px;
-    background-color:#32CD32;
-}        
+    background-color:#FFEA00;
+}
 }

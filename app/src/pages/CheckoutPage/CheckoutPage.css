@@ -1,0 +1,168 @@
+.checkout-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.checkout-container .checkout-left{
+    width: 60%;
+}
+
+.checkout-container .checkout-left .checkout-left-header h1{
+    color: #FFEA00;
+    font-weight: 500;
+}
+.checkout-container .checkout-left .checkout-left-form form .form-class-small{
+    display: flex;
+    gap: 5px;
+}
+.checkout-container .checkout-left .checkout-left-form form .form-class-small input{
+    width: 50%;
+    margin: 5px 0;
+    padding: 10px;
+    outline: 0;
+    border: 0;
+    color: #000000;
+}
+.checkout-container .checkout-left .checkout-left-form form .form-class-large{
+    display: flex;
+    gap: 5px;
+}
+.checkout-container .checkout-left .checkout-left-form form .form-class-large input{
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    outline: 0;
+    border: 0;
+    color: #000000;
+}
+
+.checkout-container .checkout-right{
+   width: 40%;
+}
+.checkout-container .checkout-right .checkout-right-header h1{
+    color: #FFEA00;
+    font-weight: 400;
+}
+.checkout-container .checkout-right .checkout-right-content .checkout-right-content-subtotal{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.checkout-container .checkout-right .checkout-right-content .checkout-right-content-delivery{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.checkout-container .checkout-right .checkout-right-content .checkout-right-content-total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-container .checkout-right .checkout-right-payment{
+    margin-top: 20px;
+}
+.checkout-container .checkout-right .checkout-right-payment h2{
+    font-weight: 700;
+    color: #FFEA00;
+}
+
+.checkout-container .checkout-right .checkout-right-payment .checkout-right-cod{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.checkout-container .checkout-right .checkout-right-payment .checkout-right-cod .cod-circle{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #FFEA00;
+    border-radius: 100px;
+}
+.checkout-container .checkout-right .checkout-right-payment .checkout-right-cod .cod-circle:hover{
+    cursor: pointer;
+}
+.checkout-container .checkout-right .checkout-right-payment .checkout-right-mpesa{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.checkout-container .checkout-right .checkout-right-payment .checkout-right-mpesa .mpesa-circle{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #4CBB17;
+    border-radius: 100px;
+}
+.checkout-container .checkout-right .checkout-right-payment .checkout-right-mpesa .mpesa-circle:hover{
+    cursor: pointer;
+}
+.checkout-container .checkout-right .checkout-right-payment .checkout-payment-btn button{
+    width: 40%;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.checkout-container .checkout-right .checkout-right-payment .checkout-payment-btn button:hover{
+    cursor: pointer;
+}
+
+.checkout-container .checkout-right .checkout-right-payment .checkout-payment-btn .cod-btn{
+    background-color: #FFEA00;
+    color: #000000;
+    font-weight: 600;
+}
+
+.checkout-container .checkout-right .checkout-right-payment .checkout-payment-btn .mpesa-btn{
+    background-color: #4CBB17;
+    color: #000000;
+    font-weight: 500;
+}
+
+
+/*---------------------------------------------*/
+@media (max-width:500px) and (min-width:100px) {
+.checkout-container{
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 50px;
+    gap: 10px;
+}
+
+.checkout-container .checkout-left{
+    width: 100%;
+}
+.checkout-container .checkout-left .checkout-left-header h1{
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.checkout-container .checkout-right{
+   width: 100%;
+}
+.checkout-container .checkout-right .checkout-right-header h1{
+    font-size: medium;
+    margin-bottom: 10px;
+}
+.checkout-container .checkout-right .checkout-right-payment{
+    margin-top: 10px;
+}
+.checkout-container .checkout-right .checkout-right-payment h2{
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+
+.checkout-container .checkout-right .checkout-right-payment .checkout-payment-btn button{
+    width: 100%;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    margin-top: 5px;
+}
+}

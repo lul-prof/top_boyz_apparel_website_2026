@@ -1,0 +1,110 @@
+.about-container{
+    width: 100%;
+    padding: 20px;
+}
+.about-container .about-header{
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+.about-container .about-header h1{
+    color: #FFEA00;
+    font-weight: 700;
+}
+
+.about-container .about-top{
+    display: flex;
+    gap: 20px;
+}
+
+.about-container .about-top .about-top-left{
+    width: 60%;
+}
+.about-container .about-top .about-top-left img{
+    width: 100%;
+    border-radius: 10px;
+}
+.about-container .about-top .about-top-left img:hover{
+    cursor: pointer;
+    transform: translateY(-4px);
+    opacity: 0.8;
+    backdrop-filter: blur(14px);
+    box-shadow: 0.5px 1px 3px #000000;
+}
+.about-container .about-top .about-top-right{
+    width: 40%;
+}
+
+.about-container .about-top .about-top-right .about-top-right-1{
+    width: 80%;
+    margin-bottom: 10px;
+}
+.about-container .about-top .about-top-right .about-top-right-1 h2{
+    font-weight: 600;
+    color: #FFEA00;
+    margin-bottom: 5px;
+}
+.about-container .about-top .about-top-right .about-top-right-2{
+    width: 80%;
+}
+.about-container .about-top .about-top-right .about-top-right-2 h1{
+    color: #FFEA00;
+    font-weight: 700;
+}
+
+.about-container .about-top .about-top-right .about-bottom{
+    width: 80%;
+    margin-top: 10px;
+}
+
+.about-container .about-top .about-top-right .about-bottom .about-bottom-header h1{
+    font-weight: 700;
+    color: #FFEA00;
+    margin-bottom: 5px;
+}
+/*-------------------------------------*/
+@media (max-width:500px) and (min-width:100px) {
+.about-container{
+    padding: 10px;
+    padding-bottom: 50px;
+}
+.about-container .about-header{
+    text-align: left;
+}
+
+.about-container .about-top{
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-container .about-top .about-top-left{
+    width: 100%;
+}
+.about-container .about-top .about-top-left img{
+    width: 100%;
+
+}
+
+.about-container .about-top .about-top-right{
+    width: 100%;
+}
+
+.about-container .about-top .about-top-right .about-top-right-1{
+    width: 100%;
+}
+.about-container .about-top .about-top-right .about-top-right-2{
+    width: 100%;
+}
+
+
+.about-container .about-top .about-top-right .about-bottom{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.about-container .about-top .about-top-right .about-bottom .about-bottom-header h1{
+    font-weight: 700;
+    color: #FFEA00;
+    margin-bottom: 5px;
+}   
+}

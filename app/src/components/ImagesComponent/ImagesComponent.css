@@ -28,7 +28,9 @@
     font-weight: 700;
 }
 .images-container .images-container-left .images-left-text button{
-    background-color: #32CD32;
+    background-color: #FFEA00;
+    color: #000;
+    font-weight: 600;
     width: 40%;
     outline: 0;
     border: 0;
@@ -51,7 +53,7 @@
     color: #000000;
 }
 .images-container .images-container-center .images-center-text button{
-    background-color: #32CD32;
+    background-color: #FFEA00;
     width: 40%;
     outline: 0;
     border: 0;
@@ -70,10 +72,15 @@
 .ic-header hr{
     opacity: 0.3;
     margin: 10px 20px;
+    border-color: #FFEA00;
 }
 
 .ic-header h1{
     font-weight: 800;
+    color: #FFEA00;
+}
+.ic-header h2{
+    color: #FFEA00;
 }
 
 @keyframes rotate {

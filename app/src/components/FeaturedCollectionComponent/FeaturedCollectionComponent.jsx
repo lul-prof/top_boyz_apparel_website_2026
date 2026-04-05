@@ -2,6 +2,7 @@ import React from 'react'
 import TitleComponent from '../TitleComponent/TitleComponent'
 import './FeaturedCollectionComponent.css'
 import { products } from '../../assets/assets'
+import { Link } from 'react-router-dom'
 
 const FeaturedCollectionComponent = () => {
   return (
@@ -20,7 +21,7 @@ const FeaturedCollectionComponent = () => {
                 products.map((product)=>(
                     <div key={product._id} className="featured-cloth">
                         <div className="featured-cloth-image">
-                            <img src={product.image[0]} alt="" />
+                           <Link to={`/merchandise/${product._id}`}><img src={product.image[0]} alt="" /></Link> 
                         </div>
                         <div className="featured-cloth-title">
                             <p>{product.title}</p>
