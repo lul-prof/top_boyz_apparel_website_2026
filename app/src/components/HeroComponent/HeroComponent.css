@@ -24,14 +24,15 @@
     font-weight: 400;
 }
 .hero-container .hero-desk .hero-desk-text button{
-    background-color: #32CD32;
+    background-color: #FFEA00;
     width: 50%;
     outline: 0;
     border: 0;
     padding: 10px;
     margin-top: 5px;
     color: #000000;
-    font-weight: 700;
+    font-weight: 800;
+    font-size: large;
     letter-spacing: 2px;
     animation: space 5s infinite;
 }

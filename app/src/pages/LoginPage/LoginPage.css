@@ -1,0 +1,155 @@
+.login-container{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 170px;
+}
+.login-container .login-form{
+    justify-self: center;
+}
+.login-container .login-form form .login-form-class{
+    margin-top: 5px;
+}
+.login-container .login-form form .login-form-class input{
+    width: 300px;
+    padding: 10px;
+    outline: 0;
+    border: 0;
+    color: #000000;
+}
+.login-container .login-form form .login-form-class label{
+    color: "";
+}
+.login-container .login-form form .login-form-btn button{
+    width: 300px;
+    outline: 0;
+    border: 0;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #FFEA00;
+    color: #000000;
+    font-weight: 700;
+}
+.login-container .login-form form .login-form-btn button:hover{
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    transition: 0.5s ease;
+    border-bottom-right-radius: 10px;
+}
+.login-container .login-form h5{
+   margin-top: 2px;
+   text-align: center;
+}
+
+.login-container .login-form h5:hover{
+    cursor: pointer;
+}
+
+/*------------Register-------------*/
+.register-container{
+    width: 100%;
+    padding: 20px 0;
+}
+.register-container .register-form{
+    justify-self: center;
+}
+.register-container .register-form form .register-form-avatar{
+    justify-self: center;
+}
+.register-container .register-form form .register-form-avatar img{
+    width: 100px;
+}
+.register-container .register-form form .register-form-avatar:hover{
+    cursor: pointer;
+}
+.register-container .register-form form .register-form-class{
+    margin-top: 5px;
+}
+.register-container .register-form form .register-form-class input{
+    width: 300px;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    color: #000000;
+}
+.register-container .register-form form .register-form-btn{
+    margin-top: 5px;
+}
+.register-container .register-form form .register-form-btn button{
+    width: 300px;
+    outline: 0;
+    border: 0;
+    background-color: #FFEA00;
+    padding: 10px;
+    color: #000000;
+    font-weight: 700;
+}
+.register-container .register-form form .register-form-btn button:hover{
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5 ease-in;
+}
+.register-container .register-form h5{
+    text-align: center;
+    margin-top: 5px;
+}
+.register-container .register-form h5:hover{
+    cursor: pointer;
+}
+/*---------------------------------------------*/
+@media (max-width:705px) and (min-width:100px) {
+.login-container{
+    padding: 10px;
+    padding-bottom: 50px;
+}
+.login-container .login-form{
+    width: 100%;
+}
+.login-container .login-form form .login-form-class{
+    margin-top: 20px;
+}
+.login-container .login-form form .login-form-class input{
+    width: 100%;
+}
+
+.login-container .login-form form .login-form-btn button{
+    width: 100%;
+}
+
+.login-container .login-form h5{
+   margin-top: 5px;
+}
+
+
+/*------------Register-------------*/
+.register-container{
+    padding: 10px 10px;
+    padding-bottom: 50px;
+}
+.register-container .register-form{
+    width: 100%;
+    margin-top: 20px;
+}
+.register-container .register-form form .register-form-avatar{
+    justify-self: center;
+}
+.register-container .register-form form .register-form-avatar img{
+    width: 100px;
+}
+
+.register-container .register-form form .register-form-class{
+    margin-top: 5px;
+}
+.register-container .register-form form .register-form-class input{
+    width:100%;
+}
+
+.register-container .register-form form .register-form-btn button{
+    width: 100%;
+}
+
+.register-container .register-form h5{
+    text-align: center;
+    margin-top: 10px;
+}
+}

@@ -1,0 +1,175 @@
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+}
+
+.contact-container .contact-left{
+    width: 50%;
+}
+.contact-container .contact-left .contact-left-header h1{
+    color: #FFEA00;
+}
+.contact-container .contact-left .contact-form form .contact-form-class{
+    margin-top: 5px;
+}
+.contact-container .contact-left .contact-form form .contact-form-class input{
+    width: 100%;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    color: #000000;
+}
+.contact-container .contact-left .contact-form form .contact-form-class  textarea{
+    width: 100%;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    color: #000000;
+}
+.contact-container .contact-left .contact-form form .contact-form-btn button{
+    width: 100%;
+    background-color: #FFEA00;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    color: #000000;
+    font-weight: 700;
+    
+}
+.contact-container .contact-left .contact-form form .contact-form-btn button:hover{
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s ease-in;
+}
+.contact-container .contact-right{
+    width: 50%;
+}
+
+.contact-container .contact-right .contact-right-header{
+    margin-bottom: 10px;
+}
+.contact-container .contact-right .contact-right-header h1{
+    color: #FFEA00;
+    font-weight: 500;
+}
+.contact-bottom{
+    width: 100%;
+    padding: 20px;
+}
+.contact-bottom .contact-bottom-header h1{
+    font-weight: 700;
+    color: #FFEA00;
+}
+
+.contact-bottom .contact-bottom-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contact-bottom .contact-bottom-content .contact-bottom-content-1{
+    margin-top: 10px;
+}
+
+.contact-bottom .contact-bottom-content .contact-bottom-content-3 h2{
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #FFEA00;
+}
+
+.contact-bottom .contact-bottom-content .contact-bottom-content-3 .contact-bottom-content-3-links{
+    display: flex;
+    gap: 10px;
+}
+
+.contact-bottom .contact-bottom-content .contact-bottom-content-3 .contact-bottom-content-3-links img{
+    width: 100px;
+    height: 100px;
+}
+.contact-bottom .contact-bottom-content .contact-bottom-content-3 .contact-bottom-content-3-links img:hover{
+    cursor: pointer;
+    transform: translateX(5px);
+    width: 80px;
+    height: 80px;
+    transition: 0.4s ease;
+}
+
+@media (max-width:500px) and (min-width:100px) {
+.contact-container{
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.contact-container .contact-left{
+    width: 100%;
+}
+.contact-container .contact-left .contact-left-header h1{
+    margin-top: 5px;
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.contact-container .contact-left .contact-form form .contact-form-class{
+    margin-top: 10px;
+}
+.contact-container .contact-left .contact-form form .contact-form-class input{
+    width: 100%;
+}
+.contact-container .contact-left .contact-form form .contact-form-class  textarea{
+    width: 100%;
+}
+.contact-container .contact-left .contact-form form .contact-form-btn button{
+    width: 100%;
+    margin-top: 10px;
+    
+}
+.contact-container .contact-right{
+    width: 100%;
+}
+
+.contact-container .contact-right .contact-right-header{
+    margin:20px 0;
+}
+.contact-container .contact-right .contact-right-header h1{
+    font-size: larger;
+}
+
+.contact-bottom{
+    width: 100%;
+    padding: 10px;
+}
+.contact-bottom .contact-bottom-header h1{
+    font-weight: 500;
+}
+
+.contact-bottom .contact-bottom-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-bottom .contact-bottom-content .contact-bottom-content-3 h2{
+    font-weight: 500;
+}
+
+.contact-bottom .contact-bottom-content .contact-bottom-content-3 .contact-bottom-content-3-links{
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.contact-bottom .contact-bottom-content .contact-bottom-content-3 .contact-bottom-content-3-links img{
+    width: 50px;
+    height: 50px;
+}
+
+.contact-bottom .contact-bottom-content .contact-bottom-content-3 .contact-bottom-content-3-links img:hover{
+    width: 30px;
+    height: 30px;
+}
+ 
+}

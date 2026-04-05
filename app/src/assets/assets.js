@@ -227,9 +227,9 @@ import product_239 from './kids_6.jpeg'
 import product_240 from './kids_7.jpeg'
 import product_241 from './kids_8.jpeg'
 import product_242 from './kids_10.jpeg'
-import userIcon from './user.png'
-import cartIcon from './shopping-bag.png'
-import menuIcon from './menu-white.png'
+import userIcon from './user-yellow.png'
+import cartIcon from './shopping-bag-yellow.png'
+import menuIcon from './menu-yellow.png'
 import heroImage from './hero_1.jpeg'
 import searchIcon from './magnifying-glass.png'
 import dashIcon from './remove.png'
@@ -246,6 +246,12 @@ import returnPolicy from './return-policy.png'
 import avatar from './avatar.png'
 import star from './star.jpeg'
 import closeIcon from './close.png'
+import instaIcon from './instagram.png'
+import youtubeIcon from './social.png'
+import itunesIcon from './itunes.png'
+import spotifyIcon from './spotify.png'
+import top1 from './top_1.jpeg'
+import top2 from './top_2.jpeg'
 
 export const assets={
   userIcon,
@@ -266,7 +272,13 @@ export const assets={
   returnPolicy,
   avatar,
   star,
-  closeIcon
+  closeIcon,
+  instaIcon,
+  youtubeIcon,
+  itunesIcon,
+  spotifyIcon,
+  top1,
+  top2
 }
 
 
@@ -2628,4 +2640,14 @@ export const reviews=[
     review:"Very professional and responsive team.",
     avatar:[avatar]
   },
+]
+
+export const cart=[
+  {
+    image:[product_10],
+    title:"Test Cart Item",
+    price:"Ksh 2500",
+    size:39,
+    quantity:1
+  }
 ]
