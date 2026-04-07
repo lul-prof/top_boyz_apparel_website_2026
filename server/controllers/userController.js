@@ -29,7 +29,7 @@ const registerUser = async (req, res) => {
     if (!req.files) {
       return res.json({
         success: false,
-        message: "Please Upload you picture",
+        message: "Please Upload your picture",
       });
     }
 
@@ -195,7 +195,7 @@ const subscribe = async (req, res) => {
 
 const addToCart=async(req,res)=>{
   try {
-    const {userId,productId}=req.body;
+    const {userId,productId,size}=req.body;
 
     const user=await userModel.findById({_id:userId});
     if(!user){
@@ -214,9 +214,14 @@ const addToCart=async(req,res)=>{
       })
     }
     if(cartData[productId]){
-      cartData[productId]+=1;
+      if(cartData[productId][size]){
+        cartData[productId][size]+=1
+      }else{
+        cartData[productId][size]=1
+      }
     }else{
-      cartData[productId]=1;
+      cartData[productId]={}
+      cartData[productId][size]=1;
     }
     const updateCart= await userModel.findByIdAndUpdate(userId,{cart:cartData});
     if(!updateCart){
@@ -245,7 +250,7 @@ const addToCart=async(req,res)=>{
 
 const updateCart = async (req, res) => {
   try {
-    const { userId, productId, quantity } = req.body;
+    const { userId, productId,size, quantity } = req.body;
     const user = await userModel.findById({ _id: userId });
     if (!user) {
       res.json({
@@ -255,7 +260,7 @@ const updateCart = async (req, res) => {
     }
     let cartData = await user.cart;
 
-    cartData[productId] = quantity;
+    cartData[productId][size] = quantity;
 
     await userModel.findByIdAndUpdate(userId, { cart: cartData });
     console.log(cartData);

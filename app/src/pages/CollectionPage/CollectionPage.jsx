@@ -1,6 +1,7 @@
 import React from 'react'
 import './CollectionPage.css'
 import {products} from '../../assets/assets'
+import {Link} from 'react-router-dom'
 
 const CollectionPage = () => {
   return (
@@ -29,7 +30,7 @@ const CollectionPage = () => {
             products.map((product)=>(
               <div key={product._id} className="product">
                   <div className="product-image">
-                    <img src={product.image[0]} alt="image" />
+                   <Link to={`/merchandise/${product._id}`}><img src={product.image[0]} alt="image" /></Link> 
                   </div>
                   <div className="product-title">
                     <h3>{product.title}</h3>

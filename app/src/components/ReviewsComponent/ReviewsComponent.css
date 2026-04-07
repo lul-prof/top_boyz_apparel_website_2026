@@ -66,8 +66,8 @@
 .rc-header h2{
     color: #FFEA00;
 }
-
-@media (max-width:500px) and (min-width:100px) {
+/*------------------MOBILE-------------------*/
+@media (max-width:768px) and (min-width:100px) {
  .reviews-container{
 
     display: grid;

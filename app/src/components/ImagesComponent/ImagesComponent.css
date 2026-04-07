@@ -19,7 +19,7 @@
 
 .images-container .images-container-left .images-left-text{
     position: relative;
-    bottom: 100px;
+    bottom: 110px;
     text-align: center;
     
 }
@@ -46,7 +46,7 @@
 
 .images-container .images-container-center .images-center-text{
     position: relative;
-    bottom: 85px;
+    bottom: 90px;
     text-align: center;
 }
 .images-container .images-container-center .images-center-text h1{
@@ -54,6 +54,8 @@
 }
 .images-container .images-container-center .images-center-text button{
     background-color: #FFEA00;
+    color: #000;
+    font-weight: 600;
     width: 40%;
     outline: 0;
     border: 0;
@@ -92,7 +94,7 @@
     }
     
 }
-@media (max-width:500px) and (min-width:100px) {
+@media (max-width:768px) and (min-width:100px) {
 .images-container{
     grid-template-columns: 1fr;
     gap: 10px;

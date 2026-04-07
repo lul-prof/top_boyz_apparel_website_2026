@@ -46,7 +46,9 @@
     border-color: #FFEA00;;
 }
 
-@media (max-width:500px) and (min-width:100px) {
+/*---------------------MOBILE-----------------------*/
+
+@media (max-width:426px) and (min-width:100px) {
 .bestseller-container{
     width: 100%;
     overflow: hidden;
@@ -55,7 +57,7 @@
 
 .bestseller-container .bestseller-clothes{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .bestseller-container .bestseller-clothes .bestseller-cloth{
@@ -65,7 +67,49 @@
 .bestseller-container .bestseller-clothes .bestseller-cloth img{
     width: 100%;
     border-radius: 10px;
-    height: 70vh;
+    height: 200px;
+}
+
+.bestseller-container .bestseller-clothes .bestseller-cloth img:hover{
+    cursor: pointer;
+    transform: translateY(5px);
+    transition: 0.3s ease-in;
+}
+.bs-header h1{
+    font-size: 25px;
+
+}
+
+.bs-header h2{
+    font-size: 15px;
+}
+
+.bs-header h3{
+    font-size: 15px;
+}
+   
+}
+
+@media (max-width:800px) and (min-width:427px) {
+.bestseller-container{
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.bestseller-container .bestseller-clothes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bestseller-container .bestseller-clothes .bestseller-cloth{
+    padding: 5px;
+}
+
+.bestseller-container .bestseller-clothes .bestseller-cloth img{
+    width: 100%;
+    border-radius: 10px;
+    height: 40vh;
 }
 
 .bestseller-container .bestseller-clothes .bestseller-cloth img:hover{

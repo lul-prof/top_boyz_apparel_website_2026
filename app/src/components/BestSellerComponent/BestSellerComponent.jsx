@@ -2,6 +2,7 @@ import React from 'react'
 import TitleComponent from '../TitleComponent/TitleComponent'
 import { products } from '../../assets/assets'
 import './BestSellerComponent.css'
+import {Link} from 'react-router-dom'
 
 const BestSellerComponent = () => {
   return (
@@ -20,7 +21,7 @@ const BestSellerComponent = () => {
                     ?
                     <div key={product._id} className="bestseller-cloth">
                         <div className="bestseller-image">
-                            <img src={product.image[0]} alt="" />
+                         <Link to={`/merchandise/${product._id}`}><img src={product.image[0]} alt="" /></Link> 
                         </div>
                         <div className="bestseller-title">
                             <p>{product.title}</p>

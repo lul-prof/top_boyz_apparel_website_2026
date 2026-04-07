@@ -97,7 +97,7 @@
     transition: 0.4s ease;
 }
 
-@media (max-width:500px) and (min-width:100px) {
+@media (max-width:800px) and (min-width:100px) {
 .contact-container{
     flex-direction: column;
     gap: 5px;

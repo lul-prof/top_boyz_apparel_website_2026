@@ -65,7 +65,7 @@ const addProduct=async(req,res)=>{
             images.map(async(item)=>{
                 let result=await cloudinary.uploader.upload(
                     item.path,{
-                        folder:"uploads/the_don/merchandise",
+                        folder:"uploads/top_boyz_apparel/apparel",
                         resource_type:"image"
                     }
                 )

@@ -16,7 +16,7 @@ const FrameComponent = () => {
         height="315" 
         src="https://www.youtube.com/embed/7BmgOWhZ0rA?si=icNoadWbPxmrurVs" 
         title="YouTube video player" 
-        frameborder="0" 
+        frameBorder="0" 
         allow="accelerometer; 
         autoplay;
         clipboard-write; 
@@ -24,8 +24,8 @@ const FrameComponent = () => {
         gyroscope; 
         picture-in-picture; 
         web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen>
+        referrerPolicy="strict-origin-when-cross-origin" 
+        allowFullScreen>
         </iframe>
         <div className="flex-frame">
             <div className="flex-1">
@@ -34,7 +34,7 @@ const FrameComponent = () => {
                 height="315" 
                 src="https://www.youtube.com/embed/UUiK5_s6tM8?si=JJaVNbUknOtlr2wA" 
                 title="YouTube video player" 
-                frameborder="0" 
+                frameBorder="0" 
                 allow="accelerometer; 
                 autoplay;
                 clipboard-write; 
@@ -42,8 +42,8 @@ const FrameComponent = () => {
                 gyroscope; 
                 picture-in-picture; 
                 web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen>
                 </iframe>
             </div>
 
@@ -53,7 +53,7 @@ const FrameComponent = () => {
                 height="315" 
                 src="https://www.youtube.com/embed/QRss4c4tFXM?si=X_cTciED2qeGYtkU" 
                 title="YouTube video player" 
-                frameborder="0" 
+                frameBorder="0" 
                 allow="accelerometer; 
                 autoplay;
                 clipboard-write; 
@@ -61,8 +61,8 @@ const FrameComponent = () => {
                 gyroscope; 
                 picture-in-picture; 
                 web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen>
                 </iframe>
             </div>
         </div>
