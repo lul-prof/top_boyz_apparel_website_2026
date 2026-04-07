@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-.faster-one-regular {
-  font-family: "Faster One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 *{
   padding: 0;
   margin: 0;
@@ -45,6 +33,44 @@ h2{
   border-radius: 10px;
 }
 
+#loader-class{
+  margin: 60px 0;
+  width: 100%;
+}
+#loader{
+  border: 1px solid #FFEA00;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  justify-self: center;
+  animation: loader 1s infinite;
+}
+#loader-text{
+  justify-self: center;
+  text-align: center;
+  margin-top: 10px;
+}
+#loader-text h2{
+  font-weight: 600;
+}
+
+@keyframes loader {
+  0%{
+    border: 1px solid #FFEA00;
+  }
+  25%{
+    border-right: 10px solid #FFEA00;
+  }
+  50%{
+    border-bottom: 10px solid #FFEA00;
+  }
+  75%{
+    border-left: 10px solid #FFEA00;
+  }
+  100%{
+    border-top: 10px solid #FFEA00;
+  }
+}
 
 /*
 black
@@ -72,4 +98,7 @@ Cream
 yellow
 #FFFF00
 #FFEA00
+#FAFA33 
+#FFC000
+#DFFF00
 */

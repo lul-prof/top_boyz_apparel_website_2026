@@ -1,0 +1,87 @@
+.add-container{
+    width: 100%;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+
+.add-container .add-form form{
+    width: 50%;
+    justify-self: center;
+}
+
+.add-container .add-form form .add-form-upload img{
+    width: 100px;
+    
+}
+
+.add-container .add-form form .add-form-upload img{
+    cursor: pointer;
+}
+.add-container .add-form form .add-form-upload{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0.5px 1px 3px #FFFFFF;
+    padding: 10px;
+}
+.add-container .add-form form .add-form-class{
+    margin-top: 10px;
+}
+.add-container .add-form form .add-form-class input{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 0;
+}
+.add-container .add-form form .add-form-class-select{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.add-container .add-form form .add-form-class-select{
+    margin-top: 10px;
+}
+.add-container .add-form form .add-form-class-select select{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 0;
+}
+.add-container .add-form form .add-form-class button{
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: #FFFFFF;
+    outline: 0;
+    border: 0;
+}
+.add-container .add-form form .add-form-class button:hover{
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.add-container .add-form form label{
+    color: #FFFFFF;
+}
+.add-container .add-form form .add-form-checkbox{
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+.add-container .add-form form .add-form-checkbox input{
+    width: 20px;
+    height: 20px;
+    outline: 0;
+    border: 0;
+}
+.add-container .add-form form .add-form-checkbox input:hover{
+    cursor: pointer;
+}
+

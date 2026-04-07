@@ -137,7 +137,7 @@
     cursor: pointer;
 }
 
-@media (max-width:425px) and (min-width:100px) {
+@media (max-width:768px) and (min-width:100px) {
 .navbar-container{
     display: flex;
     height: auto;

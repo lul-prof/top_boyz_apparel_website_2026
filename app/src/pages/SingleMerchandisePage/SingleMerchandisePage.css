@@ -36,6 +36,9 @@
     flex-direction: column;
     gap: 10px;
 }
+.single-merchandise-container .sm-top .sm-top-right .sm-top-right-title h2{
+    color: #FFEA00;
+}
 .single-merchandise-container .sm-top .sm-top-right .sm-top-size input{
     width: 60%;
     color: #000000;
@@ -45,6 +48,7 @@
 }
 .single-merchandise-container .sm-top .sm-top-right .sm-top-size h2{
     margin-bottom: 10px;
+    color: #FFEA00;
 }
 .single-merchandise-container .sm-top .sm-top-right .sm-top-cart button{
     width: 60%;
@@ -58,6 +62,7 @@
 .single-merchandise-container .sm-top .sm-top-right hr{
     opacity: 0.3;
     width: 60%;
+    border-color: #FFEA00;
 }
 .single-merchandise-container .sm-top .sm-top-right .sm-top-cart button:hover{
     cursor: pointer;
@@ -87,4 +92,72 @@
     transform: translateY(-5px);
     box-shadow: 1px 1px 2px #FFFFFF;
     backdrop-filter: blur(14px);
+}
+
+@media (max-width:600px) and (min-width:100px) {
+.single-merchandise-container{
+    width: 100%;
+}
+
+.single-merchandise-container .sm-top{
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.single-merchandise-container .sm-top .sm-top-left{
+    backdrop-filter: blur(10px);
+    width: 100%;
+    text-align: center;
+}
+
+.single-merchandise-container .sm-top .sm-top-left img{
+    width: 100%;
+    border-radius: 10px;
+    height: 50vh;
+}
+
+.single-merchandise-container .sm-bottom img{
+    width: 200px;
+    height: 200px;
+
+}
+.single-merchandise-container .sm-top .sm-top-right{
+    display: flex;
+    gap: 10px;
+}
+.single-merchandise-container .sm-top .sm-top-right .sm-top-size input{
+    width: 100%;
+    padding: 10px 20px;
+}
+.single-merchandise-container .sm-top .sm-top-right .sm-top-size h2{
+    margin-bottom: 10px;
+    color: #FFEA00;
+}
+.single-merchandise-container .sm-top .sm-top-right .sm-top-cart button{
+    width: 100%;
+}
+.single-merchandise-container .sm-top .sm-top-right hr{
+    width: 100%;
+}
+
+.single-merchandise-container .sm-bottom .sm-header{
+    padding: 10px;
+}
+.single-merchandise-container .sm-bottom .sm-header h1{
+    font-size: large;
+}
+
+
+
+.single-merchandise-container .sm-bottom .related-products .related-product{
+    margin: 5px;
+}
+
+.single-merchandise-container .sm-bottom .related-products .related-product .related-product-image img{
+    border-radius: 10px;
+}
+.single-merchandise-container .sm-bottom .related-products .related-product .related-product-title h2{
+    font-size: medium;
+}    
 }

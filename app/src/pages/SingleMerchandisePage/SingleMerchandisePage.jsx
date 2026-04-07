@@ -1,6 +1,7 @@
 import "./SingleMerchandisePage.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { products } from "../../assets/assets";
+import {Link} from 'react-router-dom'
 
 const SingleMerchandisePage = () => {
   const { id } = useParams();
@@ -60,7 +61,7 @@ const SingleMerchandisePage = () => {
                 return (
                   <div key={prod._id} className="related-product">
                     <div className="related-product-image">
-                      <img src={prod.image[0]} alt="image" />
+                     <Link to={`/merchandise/${prod._id}`}> <img src={prod.image[0]} alt="image" /></Link>
                     </div>
 
                     <div className="related-product-title">

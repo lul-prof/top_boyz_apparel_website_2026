@@ -30,7 +30,7 @@ const FeaturedCollectionComponent = () => {
                             <p>{"kes"} {product.price}</p>
                         </div>
                     </div>
-                )).slice(15,30)
+                )).slice(15,23)
             }
         </div>
     </div>

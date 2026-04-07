@@ -2,9 +2,12 @@ import React from 'react'
 import './CartPage.css'
 import { assets, cart } from '../../assets/assets'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { ShopContext } from '../../context/shopContext'
 
 const CartPage = () => {
     const navigate=useNavigate();
+    const {currency,getCartAmount,delivery_fee}=useContext(ShopContext);
   return (
     <>
     <div className="cart-container">
@@ -20,13 +23,16 @@ const CartPage = () => {
                         <>
                         <div key={index} className="cart-item">
                             <div className="cart-item-left">
-                                <img src={item.image} alt="" />
+                                <div className="cart-item-left-1">
+                                    <img src={item.image} alt="" />
+                                </div>
+                                <div className="cart-item-left-2">
+                                    <h2>{item.title}</h2>
+                                    <p>{"kes"} {item.price}</p>
+                                    <span>{item.size}</span>
+                                </div>
                             </div>
-                            <div className="cart-item-center-1">
-                                <h2>{item.title}</h2>
-                                <p>{"kes"} {item.price}</p>
-                                <span>{item.size}</span>
-                            </div>
+                    
                             <div className="cart-item-center-2">
                                 <input type="number" value={item.quantity} />
                             </div>
@@ -48,18 +54,18 @@ const CartPage = () => {
                 <div className="cart-bottom-items">
                     <div className="cart-bottom-item-1">
                         <p>Subtotal</p>
-                        <p>ksh 2500</p>
+                        <p>{currency} {getCartAmount()}</p>
                     </div>
                     <hr />
                     <div className="cart-bottom-item-2">
                         <p>Delivery Fee</p>
-                        <p>ksh 100</p>
+                        <p>{currency} {delivery_fee}</p>
                         
                     </div>
                     <hr />
                     <div className="cart-bottom-item-3">
                         <b>Total</b>
-                        <p>ksh 2600</p>
+                        <p>{currency} {getCartAmount() + delivery_fee}</p>
                     </div>
                     
                     <div className="cart-bottom-item-btn">

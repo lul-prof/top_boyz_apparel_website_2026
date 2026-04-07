@@ -57,6 +57,8 @@
 }
 .register-container .register-form form .register-form-avatar img{
     width: 100px;
+    height: 100px;
+    border-radius: 100px;
 }
 .register-container .register-form form .register-form-avatar:hover{
     cursor: pointer;
@@ -135,6 +137,7 @@
 }
 .register-container .register-form form .register-form-avatar img{
     width: 100px;
+    
 }
 
 .register-container .register-form form .register-form-class{

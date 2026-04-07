@@ -63,7 +63,7 @@
     margin-bottom: 5px;
 }
 /*-------------------------------------*/
-@media (max-width:500px) and (min-width:100px) {
+@media (max-width:900px) and (min-width:100px) {
 .about-container{
     padding: 10px;
     padding-bottom: 50px;

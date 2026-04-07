@@ -7,7 +7,7 @@ const ReviewsComponent = () => {
     <>
     <div className="rc-header">
             <h1>CUSTOMER REVIEWS</h1>
-            <h2>We Value you views and opinions</h2>
+            <h2>We Value your views and opinions</h2>
             <hr />
     </div>
     <div className="reviews-container">

@@ -252,6 +252,8 @@ import itunesIcon from './itunes.png'
 import spotifyIcon from './spotify.png'
 import top1 from './top_1.jpeg'
 import top2 from './top_2.jpeg'
+import heroYellow1 from './hero_yellow_1.jpeg'
+import heroYellow2 from './hero_yellow_2.jpeg'
 
 export const assets={
   userIcon,
@@ -278,7 +280,9 @@ export const assets={
   itunesIcon,
   spotifyIcon,
   top1,
-  top2
+  top2,
+  heroYellow1,
+  heroYellow2
 }
 
 

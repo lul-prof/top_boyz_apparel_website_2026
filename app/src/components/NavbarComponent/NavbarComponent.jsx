@@ -3,9 +3,23 @@ import './NavbarComponent.css'
 import { assets } from '../../assets/assets'
 import { useNavigate } from 'react-router-dom'
 import {toast} from 'react-hot-toast'
+import { useContext } from 'react'
+import { ShopContext } from '../../context/shopContext'
 
 const NavbarComponent = () => {
     const navigate=useNavigate();
+    const token=localStorage.getItem("token");
+    const avatar=localStorage.getItem("avatar");
+    const {getCartCount}=useContext(ShopContext);
+    const handleLogout=async()=>{
+        try {
+           localStorage.removeItem("token");
+           toast.success("Logged out Successfully");
+           navigate('/login');
+        } catch (error) {
+            console.log(error); 
+        }
+    }
   return (
     <>
     <div className="navbar-container">
@@ -28,12 +42,12 @@ const NavbarComponent = () => {
         {/*-------------------------*/}
         <div className="navbar-right">
             <div className="nav-user">
-                <img onClick={()=>(navigate('/login'))}  src={assets.userIcon} alt="user" />
+                <img onClick={()=>(navigate('/login'))}  src={avatar?avatar:assets.userIcon} alt="user" />
             </div>
             <div className="nav-cart">
                 <img onClick={()=>(navigate('/cart'))} src={assets.cartIcon} alt="cart" />
                 <div className="nav-cart-count">
-                    <p>0</p>
+                    <p>{getCartCount()}</p>
                 </div>
             </div>
             <div className="nav-menu">
@@ -57,6 +71,7 @@ const NavbarComponent = () => {
                 <li onClick={()=>(toast.success("Feature Under development"),document.getElementById("side-menu").style.display="none")}>Orders</li>
                 <li onClick={()=>(navigate('/checkout'),document.getElementById("side-menu").style.display="none")}>Checkout</li>
                 <li onClick={()=>(navigate('/collection'),document.getElementById("side-menu").style.display="none")}>Collection</li>
+                <li onClick={()=>(token?handleLogout():navigate('/login'),document.getElementById("side-menu").style.display="none")}>{token?"Logout":"Login"}</li>
             </ul>
         </nav>
         

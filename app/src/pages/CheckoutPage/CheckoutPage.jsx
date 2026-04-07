@@ -1,13 +1,64 @@
 import React, { useState } from 'react'
 import './CheckoutPage.css'
 import toast from 'react-hot-toast';
+import { useContext } from 'react';
+import { ShopContext } from '../../context/shopContext';
+import axios from "axios"
 
 const CheckoutPage = () => {
     const [mpesa,setMpesa]=useState(false);
     const [cod,setCod]=useState(true);
+    const [fname,setFname]=useState("");
+    const [lname,setLname]=useState("");
+    const [email,setEmail]=useState("");
+    const [county,setCounty]=useState("");
+    const [subCounty,setSubCounty]=useState("");
+    const [constituency,setConstituency]=useState("");
+    const [ward,setWard]=useState("");
+    const [location,setLocation]=useState("");
+    const [phone,setPhone]=useState("");
+    const {currency,getCartAmount,delivery_fee,backendUrl,cartItems,token}=useContext(ShopContext);
+
+    const getTimestamp = () => {
+        const date = new Date();
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        const seconds = String(date.getSeconds()).padStart(2, "0");
+
+        return `TDE${year}${month}${day}${hours}${minutes}${seconds}`;
+    };
+    const handleCartZero=()=>{
+        try {
+          toast.error('Add Items to cart to Checkout');
+          window.location.replace('/cart')
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
+  const reference=getTimestamp();
+  const address={fname,lname,email,county,subCounty,constituency,ward,location,phone}
+  const amount=getCartAmount()+delivery_fee;
+
+    const placeOrder=async()=>{
+        try {
+            const response=await axios.post(`${backendUrl}/api/user/order`,{items:cartItems,amount:amount, address:address, reference:reference,paymentStatus:false,paymentMethod:"cash on delivery"},{headers:{token}});
+            console.log(response);
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
   return (
     <>
-    <div className="checkout-container">
+    {
+        getCartAmount()>100
+        ?
+        <div className="checkout-container">
         {/*--------------------------*/}
         <div className="checkout-left">
             <div className="checkout-left-header">
@@ -16,25 +67,25 @@ const CheckoutPage = () => {
             <div className="checkout-left-form">
                 <form>
                     <div className="form-class-small">
-                        <input type="text" placeholder='First Name'/>
-                        <input type="text" placeholder='Last Name'/>
+                        <input type="text" placeholder='First Name' value={fname} onChange={(e)=>(setFname(e.target.value))} required/>
+                        <input type="text" placeholder='Last Name' value={lname} onChange={(e)=>(setLname(e.target.value))} required/>
                     </div>
                      <div className="form-class-large">
-                        <input type="text" placeholder='Email Address'/>
+                        <input type="text" placeholder='Email Address' value={email} onChange={(e)=>(setEmail(e.target.value))} required/>
                     </div>
                     <div className="form-class-large">
-                        <input type="text" placeholder='County'/>
+                        <input type="text" placeholder='County' value={county} onChange={(e)=>(setCounty(e.target.value))} required/>
                     </div>
                      <div className="form-class-small">
-                        <input type="text" placeholder='Sub County'/>
-                        <input type="text" placeholder='Constituency'/>
+                        <input type="text" placeholder='Sub County' value={subCounty} onChange={(e)=>(setSubCounty(e.target.value))} required/>
+                        <input type="text" placeholder='Constituency' value={constituency} onChange={(e)=>(setConstituency(e.target.value))} required/>
                     </div>
                      <div className="form-class-small">
-                        <input type="text" placeholder='Ward'/>
-                        <input type="text" placeholder='Location'/>
+                        <input type="text" placeholder='Ward' value={ward} onChange={(e)=>(setWard(e.target.value))} required/>
+                        <input type="text" placeholder='Location' value={location} onChange={(e)=>(setLocation(e.target.value))} required/>
                     </div>
                     <div className="form-class-large">
-                        <input type="text" placeholder='Phone'/>
+                        <input type="text" placeholder='Phone' value={phone} onChange={(e)=>(setPhone(e.target.value))} required/>
                     </div>
                 </form>
             </div>
@@ -47,17 +98,17 @@ const CheckoutPage = () => {
             <div className="checkout-right-content">
                 <div className="checkout-right-content-subtotal">
                     <p>Subtotal</p>
-                    <p>{"ksh"} 2500</p>
+                    <p>{currency} {getCartAmount()}</p>
                 </div>
                 <hr />
                 <div className="checkout-right-content-delivery">
                     <p>Delivery Fee</p>
-                    <p>{"ksh"} 100</p>
+                    <p>{currency} {delivery_fee}</p>
                 </div>
                 <hr />
                 <div className="checkout-right-content-total">
-                    <b>Subtotal</b>
-                    <p>{"ksh"} 2500</p>
+                    <b>TOTAL</b>
+                    <p>{currency} {getCartAmount()+delivery_fee}</p>
                 </div>
                 <div className="checkout-right-payment">
                     <h2>PAYMENT METHOD</h2>
@@ -84,7 +135,7 @@ const CheckoutPage = () => {
                         {
                             cod
                             ?
-                            <button onClick={()=>(toast.success('Feature Under Development'))} className='cod-btn'>Place Order</button>
+                            <button onClick={()=>(placeOrder())} className='cod-btn'>Place Order</button>
                             :mpesa
                             ?
                             <button onClick={()=>(toast.success('Feature Under Development'))} className='mpesa-btn'>Lipa na Mpesa</button>
@@ -98,6 +149,9 @@ const CheckoutPage = () => {
             </div>
         </div>
     </div>
+    :
+    handleCartZero()
+    }
     </>
   )
 }
