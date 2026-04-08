@@ -85,3 +85,18 @@
     cursor: pointer;
 }
 
+@media (max-width:600px) and (min-width:100px) {
+.add-container{
+    margin-top: 80px;
+}
+.add-container .add-form form{
+    width: 100%;
+}
+.add-container .add-form form .add-form-upload img{
+    width: 80px;
+}
+
+.add-container .add-form form .add-form-class-select{
+    margin-top: 10px;
+}   
+}

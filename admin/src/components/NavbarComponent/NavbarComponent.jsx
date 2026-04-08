@@ -5,6 +5,19 @@ import { useNavigate } from 'react-router-dom'
 
 const NavbarComponent = () => {
     const navigate=useNavigate();
+    const token=localStorage.getItem("admin-token");
+    const handleLogout=()=>{
+        try {
+           if(token){
+            localStorage.removeItem("admin-token");
+            navigate('/login')
+           } else{
+            navigate('/login')
+           }
+        } catch (error) {
+            console.log(error);
+        }
+    }
   return (
     <>
     <div className="navbar">
@@ -35,7 +48,7 @@ const NavbarComponent = () => {
                     <li onClick={()=>(navigate('/add'),document.getElementById("sidemenu").style.display="none")}>Add Products</li>
                     <li onClick={()=>(navigate('/orders'),document.getElementById("sidemenu").style.display="none")}>Orders</li>
                     <li onClick={()=>(navigate('/users'),document.getElementById("sidemenu").style.display="none")}>Users</li>
-                    <li onClick={()=>(navigate('/login'),document.getElementById("sidemenu").style.display="none")}>Logout</li>
+                    <li onClick={()=>(handleLogout(),document.getElementById("sidemenu").style.display="none")}>{token?"Logout":"Login"}</li>
                 </ul>
             </nav>
         </div>

@@ -9,6 +9,7 @@ import uploadArea from './upload.png'
 import closeIcon from './close.png'
 import deleteIcon from './delete.png'
 import editIcon from './pen.png'
+import payVerify from './secured.png'
 
 export const assets={
     adminAvatar,
@@ -19,7 +20,8 @@ export const assets={
     uploadArea,
     closeIcon,
     deleteIcon,
-    editIcon
+    editIcon,
+    payVerify
 }
 
 export const products=[

@@ -22,6 +22,9 @@ import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import {Toaster} from 'react-hot-toast'
+import OrdersPage from "./pages/OrdersPage/OrdersPage"
+import { useContext } from "react"
+import { ShopContext } from "./context/shopContext"
 
 let DefaultIcon = L.icon({
     iconUrl: icon,
@@ -32,6 +35,7 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 function App() {
+  const {token}=useContext(ShopContext);
 
   return (
     <>
@@ -54,12 +58,13 @@ function App() {
         >
         </Route>
         <Route path="/merchandise/:id" element={<SingleMerchandisePage/>} ></Route>
-        <Route path="/checkout" element={<CheckoutPage/>}></Route>
-        <Route path="/cart" element={<CartPage/>}></Route>
+        <Route path="/checkout" element={token?<CheckoutPage/>:<LoginPage/>}></Route>
+        <Route path="/cart" element={token?<CartPage/>:<LoginPage/>}></Route>
         <Route path="/about" element={<AboutPage/>}></Route>
         <Route path="/collection" element={<CollectionPage/>}></Route>
         <Route path="/contact" element={<ContactPage/>}></Route>
-        <Route path="/login" element={<LoginPage/>}></Route>
+        <Route path="/login" element={token?<CollectionPage/>:<LoginPage/>}></Route>
+        <Route path="/orders" element={token?<OrdersPage/>:<LoginPage/>}></Route>
       </Routes>
       <FooterComponent/>
       </BrowserRouter>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './CheckoutPage.css'
 import toast from 'react-hot-toast';
+import {useNavigate} from 'react-router-dom'
 import { useContext } from 'react';
 import { ShopContext } from '../../context/shopContext';
 import axios from "axios"
@@ -17,7 +18,9 @@ const CheckoutPage = () => {
     const [ward,setWard]=useState("");
     const [location,setLocation]=useState("");
     const [phone,setPhone]=useState("");
+    const [loading,setLoading]=useState(false)
     const {currency,getCartAmount,delivery_fee,backendUrl,cartItems,token}=useContext(ShopContext);
+    const navigate=useNavigate()
 
     const getTimestamp = () => {
         const date = new Date();
@@ -28,12 +31,12 @@ const CheckoutPage = () => {
         const minutes = String(date.getMinutes()).padStart(2, "0");
         const seconds = String(date.getSeconds()).padStart(2, "0");
 
-        return `TDE${year}${month}${day}${hours}${minutes}${seconds}`;
+        return `TBA${year}${month}${day}${hours}${minutes}${seconds}`;
     };
     const handleCartZero=()=>{
         try {
           toast.error('Add Items to cart to Checkout');
-          window.location.replace('/cart')
+          navigate('/cart')
         } catch (error) {
             console.log(error);
             
@@ -45,18 +48,57 @@ const CheckoutPage = () => {
 
     const placeOrder=async()=>{
         try {
+            setLoading(true)
             const response=await axios.post(`${backendUrl}/api/user/order`,{items:cartItems,amount:amount, address:address, reference:reference,paymentStatus:false,paymentMethod:"cash on delivery"},{headers:{token}});
             console.log(response);
-            
+            if(response.data.success){
+                setLoading(false)
+                toast.success(response.data.message);
+                navigate('/orders');
+            }else{
+                toast.error(response.data.message);
+            }
         } catch (error) {
-            console.log(error);
-            
+            console.log(error);   
+        }finally{
+            setLoading(false)
         }
     }
+
+    const placeOrderMpesa=async(e)=>{
+        e.preventDefault();
+        try {
+            setLoading(true)
+          const response=await axios.post(`${backendUrl}/api/user/lipa`,{phone,items:cartItems,amount:amount, address:address},{headers:{token}});  
+          if(response.data.success){
+                setLoading(false)
+                navigate('/orders');
+                toast.success(response.data.message);
+            }else{
+                toast.error(response.data.message);
+            }
+        } catch (error) {
+            console.log(error);   
+        }finally{
+            setLoading(false)
+        }
+    }
+    if(loading){
+    return(
+      <div id='loader-class' className="loader-class">
+        <div id='loader' className="loader">
+
+        </div>
+        <div id='loader-text' className="loader-text">
+          <h2>Please wait(Check phone for mpesa prompt)...</h2>
+        </div>
+      </div>
+    )
+  }
   return (
     <>
     {
-        getCartAmount()>100
+        getCartAmount()>0
         ?
         <div className="checkout-container">
         {/*--------------------------*/}
@@ -90,6 +132,7 @@ const CheckoutPage = () => {
                 </form>
             </div>
         </div>
+       
         {/*--------------------------*/}
         <div className="checkout-right">
             <div className="checkout-right-header">
@@ -138,12 +181,18 @@ const CheckoutPage = () => {
                             <button onClick={()=>(placeOrder())} className='cod-btn'>Place Order</button>
                             :mpesa
                             ?
-                            <button onClick={()=>(toast.success('Feature Under Development'))} className='mpesa-btn'>Lipa na Mpesa</button>
+                            <button onClick={()=>(document.getElementById("mpesa-details").style.display="block")} className='mpesa-btn'>Lipa na Mpesa</button>
                             :
                             <></>
-                            }
-                            
-                        
+                            } 
+                    </div>
+                     {/*-------------------------------*/}
+                    <div id='mpesa-details' className="mpesa-details">
+                        <form onSubmit={placeOrderMpesa}>
+                            <input type="text" placeholder='Use format 254700000000' value={phone} onChange={(e)=>setPhone(e.target.value)} required/>
+                            <button type='submit'>LIPA</button>
+                            <p onClick={()=>(document.getElementById("mpesa-details").style.display="none")} style={{textAlign:"center",color:"red",fontWeight:"600",marginTop:"10px",cursor:"pointer"}}>Close</p>
+                        </form>
                     </div>
                 </div>
             </div>

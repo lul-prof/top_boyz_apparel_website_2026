@@ -1,9 +1,11 @@
 import React from 'react'
 import './CollectionPage.css'
-import {products} from '../../assets/assets'
 import {Link} from 'react-router-dom'
+import { useContext } from 'react'
+import { ShopContext } from '../../context/shopContext'
 
 const CollectionPage = () => {
+  const {products}=useContext(ShopContext);
   return (
     <>
     <div className="collection-container">

@@ -5,12 +5,21 @@ import orderModel from '../models/orderModel.js';
 
 const handleSTKPush = async (req, res) => {
   const { phone, amount,userId,items,address } = req.body;
+  console.log("===========DETAILS===========");
+  console.log(phone);
+  console.log(amount);
+  console.log(userId);
+  console.log(items);
+  console.log(address);
+  
+  
   
   const user=await userModel.findById(userId)
   if(!user){
     console.log("Not Found");
     
   }
+  console.log("===========USER===========");
   console.log(user);
   
   
@@ -33,6 +42,7 @@ const handleSTKPush = async (req, res) => {
 
   //Render callback URL
   const callbackURL =`${process.env.CALLBACK_URL}`;
+  console.log("===========callbackURL===========");
   console.log(callbackURL);
   
   const payload = {
@@ -48,18 +58,24 @@ const handleSTKPush = async (req, res) => {
     AccountReference: "Top Boyz Apparel",
     TransactionDesc: "Payment",
   };
+
+  console.log("==============PAYLOAD================");
+  console.log(payload);
+  
+  
   
   try {
     const response=await axios.post(`${process.env.MPESA_SANDBOX_URL}`,payload,{headers:{Authorization:`Bearer ${req.token}`}})
-
-    console.log(response);
+    console.log("==========RESPONSE==========");
+    
+    console.log(response.data);
     
     const new_order=await new orderModel({
-      userId:"1",
-      user:"test user",
-      items:"test items",
+      userId,
+      user,
+      items,
       amount,
-      address:"items",
+      address,
       reference:response.data.CheckoutRequestID,
       paymentStatus:false,
       paymentMethod:"Mpesa"
@@ -73,7 +89,6 @@ const handleSTKPush = async (req, res) => {
         data:response.data,
         message:order
     })
-    
     
   } catch (error) {
     res.json({

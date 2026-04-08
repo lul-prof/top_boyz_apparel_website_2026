@@ -3,8 +3,11 @@ import TitleComponent from '../TitleComponent/TitleComponent'
 import './FeaturedCollectionComponent.css'
 import { products } from '../../assets/assets'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { ShopContext } from '../../context/shopContext'
 
 const FeaturedCollectionComponent = () => {
+    const {products}=useContext(ShopContext);
   return (
     <>
     <div className="fc-header">
@@ -30,7 +33,7 @@ const FeaturedCollectionComponent = () => {
                             <p>{"kes"} {product.price}</p>
                         </div>
                     </div>
-                )).slice(15,23)
+                )).slice(2,10)
             }
         </div>
     </div>
