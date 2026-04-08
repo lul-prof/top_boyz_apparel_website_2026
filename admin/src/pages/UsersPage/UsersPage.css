@@ -1,0 +1,123 @@
+.users-container{
+    width: 100%;
+    margin-top: 100px;
+}
+.users-container .users-header{
+    justify-self: center;
+}
+.users-container .users-header h1{
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.users-container .users{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #FFFFFF;
+    padding: 10px;
+    gap: 10px;
+}
+
+.users-container .users .user{
+    display: flex;
+    gap: 10px;
+    background-color: #FFEA00;
+    padding: 10px;border-radius: 5px; 
+}
+.users-container .users .user:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+.users-container .users .user .user-avatar{
+    width: 20%;
+}
+.users-container .users .user .user-names{
+    width: 20%;
+}
+.users-container .users .user .user-username{
+    width: 20%;
+}
+.users-container .users .user .user-phone{
+    width: 20%;
+}
+.users-container .users .user .user-email{
+    width: 20%;
+}
+.users-container .users .user .user-actions{
+    width: 20%;
+}
+
+.users-container .users .user .user-actions img{
+    width: 20%;
+}
+.users-container .users .user .user-actions img:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    margin-right: 4px;
+}
+.users-container .users .user .user-avatar img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.users-container .users .user .user-avatar img:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    margin-right: 4px;
+}
+
+@media (max-width:600px) and (min-width:100px) {
+.users-container{
+    width: 100%;
+    margin-top: 80px;
+}
+.users-container .users{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #FFFFFF;
+    padding: 10px;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.users-container .users .user{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    background-color: #FFEA00;
+    padding: 10px;
+    overflow-x: auto;
+    border-radius: 5px; 
+
+}
+
+.users-container .users .user .user-avatar{
+    width: 16%;
+}
+.users-container .users .user .user-names{
+    width: 16%;
+}
+.users-container .users .user .user-username{
+    width: 16%;
+}
+.users-container .users .user .user-phone{
+    width: 16%;
+}
+.users-container .users .user .user-email{
+    width: 16%;
+}
+.users-container .users .user .user-actions{
+    width: 16%;
+}
+
+.users-container .users .user .user-actions img{
+    width: 40px;
+}
+
+.users-container .users .user .user-avatar img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+   
+}

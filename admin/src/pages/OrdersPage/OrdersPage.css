@@ -1,0 +1,216 @@
+.orders-container{
+    margin-top: 100px;
+    width: 100%;
+}
+
+.orders-container .orders{
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+.orders-container .order-header{
+    justify-self: center;
+}
+.orders-container .order-header h1{
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.orders-container .orders .order{
+    display: flex;
+    background-color: #FFEA00;
+    overflow-x: auto;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 4rem;
+}
+
+.orders-container .orders .order p{
+    color:#000000;
+}
+
+.orders-container .orders .order .order-id{
+    width: 10%;
+}
+
+.orders-container .orders .order .order-address{
+    width: 10%;
+}
+.orders-container .orders .order .order-reference{
+    width: 10%;
+    
+}
+
+.orders-container .orders .order .order-status{
+    width: 10%;
+}
+.orders-container .orders .order .order-status select {
+    width: 100px;
+    color: #000000;
+}
+.orders-container .orders .order .order-status select option{
+    color: #000000;
+}
+.orders-container .orders .order .order-pay-method{
+    width: 10%;
+}
+
+.orders-container .orders .order .order-payment-amt{
+    width: 10%;
+}
+
+.orders-container .orders .order .order-pay-status{
+    width: 10%;
+    text-align: center;
+}
+.orders-container .orders .order .order-pay-status img{
+    width: 20px;
+    margin-top: 10px;
+}
+.orders-container .orders .order .order-pay-status img:hover{
+    cursor: pointer;
+    width: 30px;
+}
+.orders-container .orders .order .order-user{
+    width: 10%;
+}
+
+.orders-container .orders .order .order-email{
+    width: 10%;
+}
+
+.orders-container .orders .order .order-email{
+    width: 10%;
+}
+
+.orders-container .orders .order .order-phone{
+    width: 10%;
+}
+
+.orders-container .orders .order .order-items{
+    width: 10%;
+}
+.orders-container .orders .order .order-actions{
+    width: 10%;
+}
+.orders-container .orders .order .order-actions img{
+    width: 20px;
+    height: 20px;
+}
+.orders-container .orders .order .order-actions img:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+.orders-container .orders .order .order-items .order-items-item{
+    display: flex;
+    gap: 10px;
+}
+.orders-container .orders .order .order-items .order-items-item img{
+    width: 20px;
+    height: 20px;
+}
+.orders-container .orders .order .order-items .order-items-item img:hover{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-4px);
+    backdrop-filter: blur(14px);
+    box-shadow: 0.5px 1px 2px #FFFFFF;
+}
+
+@media (max-width:600px) and (min-width:100px) {
+.orders-container{
+    margin-top: 70px;
+}
+.orders-container .orders{
+    gap: 10px;
+}
+.orders-container .order-header h1{
+    margin-bottom: 10px;
+}
+.orders-container .orders .order{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 6rem;
+}
+
+.orders-container .orders .order .order-id{
+    width: 9%;
+    display: none;
+}
+.orders-container .orders .order .order-address{
+    width: 9%;
+}
+.orders-container .orders .order .order-reference{
+    width: 9%; 
+    display: none;
+}
+.orders-container .orders .order .order-status{
+    width: 9%;
+}
+.orders-container .orders .order .order-status select {
+    width: 100px;
+    color: #000000;
+}
+.orders-container .orders .order .order-status select option{
+    color: #000000;
+}
+.orders-container .orders .order .order-pay-method{
+    width: 9%;
+}
+
+.orders-container .orders .order .order-payment-amt{
+    width: 9%;
+}
+.orders-container .orders .order .order-pay-status{
+    width: 9%;
+}
+.orders-container .orders .order .order-pay-status img{
+    width: 20px;
+    margin-top: 10px;
+}
+.orders-container .orders .order .order-pay-status img:hover{
+    cursor: pointer;
+    width: 30px;
+}
+.orders-container .orders .order .order-user{
+    width: 9%;
+    display: none;
+}
+
+.orders-container .orders .order .order-email{
+    width: 9%;
+}
+
+.orders-container .orders .order .order-email{
+    width: 9%;
+}
+
+.orders-container .orders .order .order-phone{
+    width: 9%;
+}
+.orders-container .orders .order .order-items{
+    width: 9%;
+}
+.orders-container .orders .order .order-actions{
+    width: 9%;
+}
+.orders-container .orders .order .order-actions img{
+    width: 20px;
+    height: 20px;
+}
+
+.orders-container .orders .order .order-items .order-items-item{
+    display: flex;
+    
+    gap: 10px;
+}
+.orders-container .orders .order .order-items .order-items-item img{
+    width: 20px;
+    height: 20px;
+}  
+}
+

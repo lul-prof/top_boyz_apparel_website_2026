@@ -78,9 +78,9 @@ const LoginPage = () => {
 }
 const handleTokenExists=()=>{
   try {
-    
+    navigate('/')
     toast.error("You are already logged in")
-    window.location.replace('/')
+    
   } catch (error) {
     console.log(error);
   }

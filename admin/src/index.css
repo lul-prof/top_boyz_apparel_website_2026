@@ -24,7 +24,45 @@ body{
   background-color: #FFFFFF; 
   border-radius: 10px;
 }
+#loader-class{
+  margin: 100px 0;
+  width: 100%;
+}
+#loader{
+  border: 1px solid #FFEA00;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  justify-self: center;
+  animation: loader 1s infinite;
+}
+#loader-text{
+  justify-self: center;
+  text-align: center;
+  margin-top: 10px;
+}
+#loader-text h2{
+  font-weight: 600;
+  color: #FFFFFF;
+}
 
+@keyframes loader {
+  0%{
+    border: 1px solid #FFEA00;
+  }
+  25%{
+    border-right: 10px solid #FFEA00;
+  }
+  50%{
+    border-bottom: 10px solid #FFEA00;
+  }
+  75%{
+    border-left: 10px solid #FFEA00;
+  }
+  100%{
+    border-top: 10px solid #FFEA00;
+  }
+}
 /*
 black
 #000000

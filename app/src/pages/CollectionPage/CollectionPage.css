@@ -48,7 +48,6 @@
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
     gap: 10px;
-    
 }
 
 .collection-container .container-right .collection-right-content .product .product-image img{

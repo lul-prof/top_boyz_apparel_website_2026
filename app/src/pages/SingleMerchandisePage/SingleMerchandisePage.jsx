@@ -1,12 +1,18 @@
 import "./SingleMerchandisePage.css";
 import { useNavigate, useParams } from "react-router-dom";
-import { products } from "../../assets/assets";
 import {Link} from 'react-router-dom'
+import { useContext } from "react";
+import {ShopContext} from '../../context/shopContext'
+import { useState } from "react";
 
 const SingleMerchandisePage = () => {
   const { id } = useParams();
+  const {products}=useContext(ShopContext);
   const product = products.find((prod) => prod._id === id);
+  const [size,setSize]=useState("")
   const navigate=useNavigate();
+
+  const {addToCart}=useContext(ShopContext)
 
   return (
     <>
@@ -35,11 +41,13 @@ const SingleMerchandisePage = () => {
               <input
                 type="text"
                 placeholder="e.g 39 for shoes & M for clothes"
+                value={size}
+                onChange={(e)=>(setSize(e.target.value))}
               />
             </div>
 
             <div className="sm-top-cart">
-              <button onClick={()=>(navigate('/cart'))}>ADD TO CART</button>
+              <button onClick={()=>(addToCart(product._id,size))}>ADD TO CART</button>
             </div>
 
             <hr />
@@ -55,9 +63,7 @@ const SingleMerchandisePage = () => {
           </div>
           <div className="related-products">
             {products.map((prod) => {
-              if (prod.subCategory === product.subCategory) {
-                console.log(prod.category);
-
+              if (prod.subCategory === product.subCategory && prod.category === product.category) {
                 return (
                   <div key={prod._id} className="related-product">
                     <div className="related-product-image">

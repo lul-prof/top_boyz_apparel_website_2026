@@ -124,7 +124,42 @@
     font-weight: 500;
 }
 
-
+#mpesa-details{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50% - 50%);
+    background-color: #C9C9C9;
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+#mpesa-details form{
+    justify-self: center;
+    align-items: center;
+}
+#mpesa-details form input{
+    width: 100%;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    margin-bottom: 8px;
+    color: #000000;
+}
+#mpesa-details form button{
+    width: 100%;
+    background-color: #4CBB17;
+    outline: 0;
+    border: 0;
+    padding: 10px;
+}
+#mpesa-details form button:hover{
+    cursor: pointer;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: 600;
+}
 /*---------------------------------------------*/
 @media (max-width:768px) and (min-width:100px) {
 .checkout-container{
@@ -133,7 +168,6 @@
     padding-bottom: 50px;
     gap: 10px;
 }
-
 .checkout-container .checkout-left{
     width: 100%;
 }
@@ -141,7 +175,6 @@
     font-size: large;
     margin-bottom: 10px;
 }
-
 .checkout-container .checkout-right{
    width: 100%;
 }
@@ -156,13 +189,15 @@
     font-weight: 400;
     margin-bottom: 10px;
 }
-
-
 .checkout-container .checkout-right .checkout-right-payment .checkout-payment-btn button{
     width: 100%;
     outline: 0;
     border: 0;
     padding: 10px;
     margin-top: 5px;
+}
+#mpesa-details{
+    top: 40%;
+    left: 10%;
 }
 }

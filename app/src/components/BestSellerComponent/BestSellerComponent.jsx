@@ -1,10 +1,12 @@
 import React from 'react'
 import TitleComponent from '../TitleComponent/TitleComponent'
-import { products } from '../../assets/assets'
 import './BestSellerComponent.css'
 import {Link} from 'react-router-dom'
+import { useContext } from 'react'
+import { ShopContext } from '../../context/shopContext'
 
 const BestSellerComponent = () => {
+    const {products}=useContext(ShopContext);
   return (
     <>
     <div className="bs-header">

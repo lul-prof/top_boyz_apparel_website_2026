@@ -14,12 +14,12 @@ userRouter.get('/products',fetchProducts);
 userRouter.post('/product/:productId',fetchProduct);
 userRouter.post('/subscribe',subscribe);
 userRouter.post('/addToCart',authUser,addToCart)
-userRouter.post('/updateCart',updateCart);
+userRouter.post('/updateCart',authUser,updateCart);
 userRouter.post('/cart',authUser,getCart);
 userRouter.post('/order',authUser,placeOrder);
-userRouter.post('/orders',myOrders);
-userRouter.post('/contact',contact);
-userRouter.post('/lipa',generateToken,handleSTKPush)
+userRouter.post('/orders',authUser,myOrders);
+userRouter.post('/contact',authUser,contact);
+userRouter.post('/lipa',generateToken,authUser,handleSTKPush)
 userRouter.post('/callback-mpesa',callbackMpesa)
 
 export default userRouter;

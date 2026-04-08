@@ -411,7 +411,7 @@ export const products=[
     bestseller:false
   },
   {
-    _id: "p012",
+    _id: "69d3f9c8c8d147fd1c32ab0a",
     title: "Travis Sneakers",
     description: "Trendy sneakers inspired by modern streetwear culture, offering both comfort and style.",
     image:[product_12,product_13],
@@ -423,7 +423,7 @@ export const products=[
     bestseller:false
   },
   {
-    _id: "p014",
+    _id: "69d5e087ee2266734d1ac101",
     title: "Jordan 4 Sneakers",
     description: "Iconic Jordan 4 sneakers known for their premium build and timeless street appeal.",
     image:[product_14],
@@ -435,7 +435,7 @@ export const products=[
     bestseller:false
   },
   {
-    _id: "p015",
+    _id: "69d5e04aee2266734d1ac100",
     title: "Jordan 4 Classic",
     description: "Classic Jordan 4 design delivering comfort, durability, and iconic style.",
     image:[product_15],

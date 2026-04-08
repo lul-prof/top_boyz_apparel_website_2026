@@ -1,7 +1,7 @@
 import React from 'react'
 import './NavbarComponent.css'
 import { assets } from '../../assets/assets'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import {toast} from 'react-hot-toast'
 import { useContext } from 'react'
 import { ShopContext } from '../../context/shopContext'
@@ -11,6 +11,7 @@ const NavbarComponent = () => {
     const token=localStorage.getItem("token");
     const avatar=localStorage.getItem("avatar");
     const {getCartCount}=useContext(ShopContext);
+    const adminUrl=import.meta.env.VITE_ADMIN_URL;
     const handleLogout=async()=>{
         try {
            localStorage.removeItem("token");
@@ -68,9 +69,10 @@ const NavbarComponent = () => {
                 <li onClick={()=>(navigate('/about'),document.getElementById("side-menu").style.display="none")}>About</li>
                 <li onClick={()=>(navigate('/contact'),document.getElementById("side-menu").style.display="none")}>Contact</li>
                 <li onClick={()=>(navigate('/cart'),document.getElementById("side-menu").style.display="none")}>Cart</li>
-                <li onClick={()=>(toast.success("Feature Under development"),document.getElementById("side-menu").style.display="none")}>Orders</li>
+                <li onClick={()=>(navigate('/orders'),document.getElementById("side-menu").style.display="none")}>Orders</li>
                 <li onClick={()=>(navigate('/checkout'),document.getElementById("side-menu").style.display="none")}>Checkout</li>
                 <li onClick={()=>(navigate('/collection'),document.getElementById("side-menu").style.display="none")}>Collection</li>
+                <Link style={{textDecoration:"none"}} to={adminUrl} target='_blank'><li>Admin</li></Link>
                 <li onClick={()=>(token?handleLogout():navigate('/login'),document.getElementById("side-menu").style.display="none")}>{token?"Logout":"Login"}</li>
             </ul>
         </nav>

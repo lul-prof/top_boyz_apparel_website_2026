@@ -228,6 +228,7 @@ const deleteOrder=async(req,res)=>{
     }
 }
 
+
 const fetchUsers=async(req,res)=>{
     try {
         const users=await userModel.find({});
@@ -252,6 +253,51 @@ const fetchUsers=async(req,res)=>{
     }
 }
 
+const verifyPayment=async(req,res)=>{
+    try {
+        const {orderId}=req.params;
+        const updatedOrder=await orderModel.findByIdAndUpdate(orderId,{paymentStatus:true});
+        if(!updatedOrder){
+            return res.json({
+                success:false,
+                message:"Could not Update Status"
+            })
+        }
+        res.json({
+            success:true,
+            message:"Status Updated successfully"
+        })
+    } catch (error) {
+        console.log(error);
+        res.json({
+            success:false,
+            message:error.message
+        }) 
+    }
+}
+
+
+const updateStatus=async(req,res)=>{
+    try {
+       const {status}=req.body;
+       const {orderId}=req.params;
+
+       const updatedStatus=await orderModel.findByIdAndUpdate(orderId,{status:status});
+       if(!updateStatus){
+        return res.json({
+            success:false,
+            message:"Could not update Status"
+        })
+       }
+       res.json({
+        success:true,
+        message:"Status updated Successfully"
+       })
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 export {
     addProduct,
@@ -261,5 +307,7 @@ export {
     fetchOrders,
     deleteProduct,
     deleteOrder,
-    fetchProducts
+    fetchProducts,
+    verifyPayment,
+    updateStatus
 }
