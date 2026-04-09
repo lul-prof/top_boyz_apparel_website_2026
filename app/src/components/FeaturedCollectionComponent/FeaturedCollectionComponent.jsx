@@ -1,7 +1,6 @@
 import React from 'react'
 import TitleComponent from '../TitleComponent/TitleComponent'
 import './FeaturedCollectionComponent.css'
-import { products } from '../../assets/assets'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { ShopContext } from '../../context/shopContext'
@@ -18,8 +17,25 @@ const FeaturedCollectionComponent = () => {
     </div>
     
     <div className="featured-collection-container">
-        
-        <div className="featured-clothes">
+        {
+            products.length<=0
+            ?
+            <div className="shimmer">
+                <div className="shimmer-class">
+
+                </div>
+                <div className="shimmer-class">
+
+                </div>
+                <div className="shimmer-class">
+
+                </div>
+                <div className="shimmer-class">
+
+                </div>
+            </div>
+            :
+            <div className="featured-clothes">
             {
                 products.map((product)=>(
                     <div key={product._id} className="featured-cloth">
@@ -36,6 +52,7 @@ const FeaturedCollectionComponent = () => {
                 )).slice(2,10)
             }
         </div>
+        }
     </div>
     
     </>

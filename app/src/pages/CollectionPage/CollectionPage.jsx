@@ -27,7 +27,25 @@ const CollectionPage = () => {
         <div className="collection-right-header">
           <h2>ALL COLLECTIONS</h2>
         </div>
-        <div className="collection-right-content">
+        {
+          products.length<=0
+          ?
+          <div className="shimmer">
+                <div className="shimmer-class">
+
+                </div>
+                <div className="shimmer-class">
+
+                </div>
+                <div className="shimmer-class">
+
+                </div>
+                <div className="shimmer-class">
+
+                </div>
+          </div>
+          :
+          <div className="collection-right-content">
           {
             products.map((product)=>(
               <div key={product._id} className="product">
@@ -44,6 +62,7 @@ const CollectionPage = () => {
             ))
           }
         </div>
+        }
       </div>
     </div>
     </>

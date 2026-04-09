@@ -54,6 +54,9 @@ h2{
   font-weight: 600;
 }
 
+
+
+
 @keyframes loader {
   0%{
     border: 1px solid #FFEA00;

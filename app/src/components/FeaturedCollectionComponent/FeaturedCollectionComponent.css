@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 100%;
+    overflow-x: auto;
 }
 
 .featured-collection-container .featured-clothes .featured-cloth{
@@ -46,6 +47,55 @@
 }
 .fc-header h3{
     color: #FFEA00;
+}
+
+.featured-collection-container .featured-clothes::-webkit-scrollbar {
+  width: 0; 
+  height: 0px;
+}
+.featured-collection-container .featured-clothes::-webkit-scrollbar-track {
+  background:#FFEA00;  
+}
+.featured-collection-container .featured-clothes::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF; 
+  border-radius: 10px;
+}
+.featured-collection-container .shimmer{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+.featured-collection-container .shimmer .shimmer-class{
+    width: 100%;
+    height: 200px;
+    background-color: #C9C9C9;
+    border-radius: 5px;
+    box-shadow: 0.5px 1px 2px #FFFFFF;
+    backdrop-filter: blur(14px);
+    animation: shimmer 5s infinite;
+}
+.featured-collection-container .shimmer .shimmer-class:hover{
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+@keyframes shimmer {
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0.8;
+    }
+    50%{
+        opacity: 0.6;
+    }
+    75%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 0.2;
+    }
+    
 }
 
 /*-----------------------MOBILE----------------------*/
@@ -88,6 +138,16 @@
 
 .fc-header h3{
     font-size: 15px;
+}
+
+.featured-collection-container .shimmer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.featured-collection-container .shimmer .shimmer-class{
+    width: 100%;
+    height: 150px;
 }
     
 }
