@@ -163,6 +163,10 @@ const callbackMpesa=async(req, res) => {
     const delete_order=await orderModel.findByIdAndDelete(orderId);
     console.log("==============Failed Transaction=============");
     console.log(delete_order);
+    return res.json({
+      success:false,
+      message:"Transaction failed"
+    })
   }
 
   res.json({ 

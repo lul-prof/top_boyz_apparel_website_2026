@@ -16,7 +16,25 @@ const BestSellerComponent = () => {
             <hr />
     </div>
     <div className="bestseller-container">
-        <div className="bestseller-clothes">
+        {
+            products.length<=0
+            ?
+            <div className="shimmer">
+                <div className="shimmer-class">
+
+                </div>
+                <div className="shimmer-class">
+
+                </div>
+                <div className="shimmer-class">
+
+                </div>
+                <div className="shimmer-class">
+
+                </div>
+            </div>
+            :
+            <div className="bestseller-clothes">
             {
                 products.map((product)=>(
                     product.bestseller
@@ -40,6 +58,7 @@ const BestSellerComponent = () => {
                 ))
             }
         </div>
+        }
     </div>
     </>
   )
